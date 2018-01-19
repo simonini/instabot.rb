@@ -54,7 +54,8 @@ module Login
       return true
     else
       puts "[-] [##{@login_counter}] ".cyan + "You're not logged in (or it is an error with the request)\t[TRYING AGAIN]".red.bold
-      exit! if @login_counter == 3
+      #exit! if @login_counter == 3
+      return "fail"
       @login_counter += 1
       login
     end
